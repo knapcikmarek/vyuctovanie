@@ -202,9 +202,9 @@ export default function App() {
 
     <h3>Výsledky</h3>
 
-    <p>Pretáčanie spolu: <b>{pretacanieMin} H</b></p>
+    <p>Pretáčanie spolu: <b>{pretacanieMin} h</b></p>
 
-    <p>Mth spolu: <b>{MthSpolu.toFixed(2)} H</b></p>
+    <p>Mth spolu: <b>{MthSpolu.toFixed(2)} h</b></p>
 
     <p>Spotreba km: <b>{litreKm.toFixed(2)} l</b></p>
 
