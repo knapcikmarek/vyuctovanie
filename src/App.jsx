@@ -169,7 +169,7 @@ export default function App() {
 
       <div className="field">
 
-       <label>Mth od tankovania (l)</label>
+       <label>Mth od tankovania (min)</label>
 
       <input
 
