@@ -25,7 +25,7 @@ export default function App() {
 
   const [vypocitane, setVypocitane] = useState(false);
 
-  const pretacanieMin = Number(pretacania) * Number(minuty);
+  const pretacanieMin = (Number(pretacania) * Number(minuty)) / 60;
 
   const litreKm = (Number(km) / 100) * Number(spotreba100);
 
@@ -33,7 +33,7 @@ export default function App() {
 
   const litreSpolu = litreKm + litreMth;
 
-  const MthSpolu = Number(mth) + Number(pretacanieMin);
+  const MthSpolu = (Number(mth) + Number(pretacanieMin)) / 60;
 
   const zostatok = Number(plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
 
@@ -202,9 +202,9 @@ export default function App() {
 
     <h3>Výsledky</h3>
 
-    <p>Pretáčanie spolu: <b>{pretacanieMin} min</b></p>
+    <p>Pretáčanie spolu: <b>{pretacanieMin} H</b></p>
 
-    <p>Mth spolu: <b>{MthSpolu.toFixed(2)} Mth</b></p>
+    <p>Mth spolu: <b>{MthSpolu.toFixed(2)} H</b></p>
 
     <p>Spotreba km: <b>{litreKm.toFixed(2)} l</b></p>
 
