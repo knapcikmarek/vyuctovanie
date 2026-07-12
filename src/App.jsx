@@ -33,7 +33,7 @@ export default function App() {
 
   const litreSpolu = litreKm + litreMth;
 
-  const MthSpolu = (Number(mth) + Number(pretacanieMin)) / 60;
+  const MthSpolu = (Number(mth) + Number(pretacanieMin));
 
   const zostatok = Number(plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
 
