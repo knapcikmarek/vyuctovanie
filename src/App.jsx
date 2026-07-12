@@ -29,7 +29,7 @@ export default function App() {
 
   const litreKm = (Number(km) / 100) * Number(spotreba100);
 
-  const litreMth = ((Number(mth) + Number(pretacanieMin)) / 60) * Number(spotrebaMth);
+  const litreMth = (((Number(mth) / 60) + Number(pretacanieMin))) * Number(spotrebaMth);
 
   const litreSpolu = litreKm + litreMth;
 
