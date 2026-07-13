@@ -543,7 +543,7 @@ label {
   @media (max-width:768px){
 
     .container{
-        
+        display: block;
         width:100%;
         max-width:100%;
         margin:0;
@@ -552,6 +552,7 @@ label {
     }
     
     .main-panel{
+      display: block;
         width:100%;
         padding:15px;
         margin:0px;
