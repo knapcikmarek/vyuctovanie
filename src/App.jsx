@@ -56,6 +56,16 @@ export default function App() {
       spotrebaMth: 10,  
       
     },
+    {
+      id:5,
+      nazov: "Tatra 815x7",
+      obrazok: "/images/tatra.png",
+      palivo: "Diesel",
+      plnaNadrz: 850,
+      spotreba100: 16,
+      spotrebaMth: 19,  
+      
+    },
   ];
 
   const [vozidla, setVozidla] = useState(predvoleneVozidla);
