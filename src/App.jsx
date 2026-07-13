@@ -22,7 +22,7 @@ export default function App() {
       nazov: "Scania cas 20",
       obrazok: "/images/scania.png",
       palivo: "Diesel",
-      nadrz: 600,
+      plnaNadrz: 600,
       spotreba100: 20,
       spotrebaMth: 35,  
     },
@@ -31,7 +31,7 @@ export default function App() {
       nazov: "Iveco Daily",
       obrazok: "/images/iveco.png",
       palivo: "Diesel",
-      nadrz: 400,
+      plnaNadrz: 400,
       spotreba100: 10,
       spotrebaMth: 15,  
       
@@ -125,7 +125,7 @@ export default function App() {
             (v) => v.id === Number(e.target.value)
       );
     setVybraneVozidlo(vozidlo);
-    setPlnaNadrz(nadrz);
+    
   }}
   >
   {vozidla.map((v) => (
