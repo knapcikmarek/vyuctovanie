@@ -9,12 +9,12 @@ body {
   align-items: flex-start;
   background: #121212;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron',sans-serif;
 }
 body{
-  background: #121212;
+  background: #222;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron',sans-serif;
 }
 
 .container{
@@ -51,7 +51,7 @@ body{
   align-items:center;
   gap:25px;
 
-  background:#1b1b1b;
+  background:#901e1e;
   border-radius:20px;
 
   padding:30px;
