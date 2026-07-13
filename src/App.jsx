@@ -124,6 +124,13 @@ export default function App() {
   >
     <option value="scania">🚒 Scania CAS 20</option>
     <option value="iveco">🚐 Iveco Daily</option>
+    onClick={() => {
+      setVybraneVozidlo(v);
+      setSpotreba100(v.spotreba100);
+      setSpotrebaMth(v.spotrebaMth);
+      setPlnaNadrz(v.nadrz);
+    }
+  }
   </select>
 </div>
     
