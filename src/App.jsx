@@ -35,7 +35,17 @@ export default function App() {
       spotreba100: 10,
       spotrebaMth: 15,  
       
-    }
+    },
+    {
+      id:3,
+      nazov: "Iveco Traker",
+      obrazok: "/images/iveco.png",
+      palivo: "Diesel",
+      plnaNadrz: 700,
+      spotreba100: 12,
+      spotrebaMth: 18,  
+      
+    },
   ];
 
   const [vozidla, setVozidla] = useState(predvoleneVozidla);
