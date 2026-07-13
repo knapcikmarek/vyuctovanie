@@ -8,8 +8,11 @@ import{
   FaTachometerAlt,
   FaOilCan,
   FaFillDrip,
+  FaBatteryHalf,
+  FaPumpMedical,
 
 }from "react-icons/fa";
+import { FaOilWell } from "react-icons/fa6";
 
 export default function App() {
 
@@ -104,9 +107,9 @@ export default function App() {
       <div className="main-panel">
 
       <div className="header">
-        <span className="truck">🚒</span>
+        
         <div>
-          <h1>Kalkulačka</h1>
+          <h1>KALKULAČKA</h1>
           <h2>spotreby hasičského vozidla</h2>
         </div>
 
@@ -264,26 +267,63 @@ export default function App() {
 
 
 {vypocitane && (
-  <div className="vysledky">
-  <>
-    <hr />
+  <div className="result-container">
+    <h2>Výsleky</h2>
+  <div className="result-grid">
+  
 
-    <h3>Výsledky</h3>
+    
+    <div className="result-card">
+      
+        <FaClock className="result-icon" />
+        <span className="restult-label">Pretáčanie spolu</span>
+        <h3>{pretacanieMin} h</h3>
+    </div>
 
-    <p>Pretáčanie spolu: <b>{pretacanieMin} h</b></p>
+    <div className="result-card">
+      
+        <FaClock className="result-icon" />
+        <span className="restult-label">Mth spolu:</span>
+        <h3>{MthSpolu.toFixed(2)} h</h3>
+    </div>
+    
+    <div className="result-card">
+      
+        <FaRoad className="result-icon" />
+        <span className="restult-label">Spotreba km:</span>
+        <h3>{litreKm.toFixed(2)} l</h3>
+    </div>
 
-    <p>Mth spolu: <b>{MthSpolu.toFixed(2)} h</b></p>
+    <div className="result-card">
+      
+      <FaClock className="result-icon" />
+      <span className="restult-label">Spotreba Mth:</span>
+      <h3>{litreMth.toFixed(2)} l</h3>
+    </div>
+    
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
+      <span className="restult-label">Spotreba Spolu:</span>
+      <h3>{litreSpolu.toFixed(2)} l</h3>
+    </div>
 
-    <p>Spotreba km: <b>{litreKm.toFixed(2)} l</b></p>
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
+      <span className="restult-label">Spotreba od tankovania:</span>
+      <h3>{NovaSpotreba.toFixed(2)} l</h3>
+    </div>
 
-    <p>Spotreba Mth: <b>{litreMth.toFixed(2)} l</b></p>
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
+      <span className="restult-label">Zostatok nádrže:</span>
+      <h3>{zostatok.toFixed(2)} l</h3>
+    </div>
 
-    <p>Spotreba spolu: <b>{litreSpolu.toFixed(2)} l</b></p>
-
-    <p>Spotreba od tankovania: <b>{NovaSpotreba.toFixed(2)} l</b></p>
-
-    <p>Zostatok nádrže: <b>{zostatok.toFixed(2)} l</b></p>
-  </>
+  
+  </div>
   </div>
 )}    </div>
 <div className="right-panel">
