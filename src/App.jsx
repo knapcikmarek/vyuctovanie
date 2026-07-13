@@ -118,20 +118,21 @@ export default function App() {
 
       </div>
       <div className="mobile-select">
-  <select
-    value={vybraneVozidlo}
-    onChange={(e) => setVybraneVozidlo(e.target.value)}
+      <select
+  value={vybraneVozidlo.id}
+  onChange={(e) => {
+    const vozidlo = vozidla.find(
+      (v) => v.id === Number(e.target.value)
+    );
+    setVybraneVozidlo(vozidlo);
+  }}
   >
-    <option value="scania">🚒 Scania CAS 20</option>
-    <option value="iveco">🚐 Iveco Daily</option>
-    onClick={() => {
-      setVybraneVozidlo(v);
-      setSpotreba100(v.spotreba100);
-      setSpotrebaMth(v.spotrebaMth);
-      setPlnaNadrz(v.nadrz);
-    }
-  }
-  </select>
+  {vozidla.map((v) => (
+    <option key={v.id} value={v.id}>
+      🚒 {v.nazov}
+    </option>
+  ))}
+</select>
 </div>
     
   <div className="form-grid">
