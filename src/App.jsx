@@ -98,7 +98,7 @@ export default function App() {
       setVybraneVozidlo(v);
       setSpotreba100(v.spotreba100);
       setSpotrebaMth(v.spotrebaMth);
-      setPlnaNadrz(v.nadrz);
+      setPlnaNadrz(v.plnaNadrz);
     }}
   >
     🚒 {v.nazov}
