@@ -66,6 +66,51 @@ export default function App() {
       spotrebaMth: 19,  
       
     },
+    {
+      id:6,
+      nazov: "Štvorkolka",
+      obrazok: "/images/scania.png",
+      palivo: "Benzin",
+      plnaNadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
+    {
+      id:7,
+      nazov: "KHA",
+      obrazok: "/images/scania.png",
+      palivo: "Diesel",
+      plnaNadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
+    {
+      id:8,
+      nazov: "Tatra Phoenix",
+      obrazok: "/images/scania.png",
+      palivo: "Diesel",
+      plnaNadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
+    {
+      id:9,
+      nazov: "Man Tunel",
+      obrazok: "/images/scania.png",
+      palivo: "Diesel",
+      plnaNadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
+    {
+      id:10,
+      nazov: "Autobus",
+      obrazok: "/images/scania.png",
+      palivo: "Diesel",
+      plnaNadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
   ];
 
   const [vozidla, setVozidla] = useState(predvoleneVozidla);
