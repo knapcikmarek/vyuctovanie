@@ -547,8 +547,8 @@ label {
         width:100%;
         max-width:100%;
         margin:0;
-        padding:10px;
-        background: black;
+        padding:0px;
+        background: rgb(220, 20, 20);
     }
     
     .main-panel{
