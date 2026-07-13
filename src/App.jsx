@@ -119,11 +119,11 @@ export default function App() {
       </div>
       <div className="mobile-select">
       <select
-  value={vybraneVozidlo.id}
-  onChange={(e) => {
-    const vozidlo = vozidla.find(
-      (v) => v.id === Number(e.target.value)
-    );
+        value={vybraneVozidlo.id}
+        onChange={(e) => {
+          const vozidlo = vozidla.find(
+            (v) => v.id === Number(e.target.value)
+          );
     setVybraneVozidlo(vozidlo);
   }}
   >
@@ -234,7 +234,7 @@ export default function App() {
 
         type="number"
 
-        value={tankovanie.nadrz}
+        value={tankovanie}
 
         onChange={(e) => setTankovanie(e.target.value)}
 
@@ -248,7 +248,8 @@ export default function App() {
 
         type="number"
 
-        value={plnaNadrz}
+        value={vybraneVozidlo.plnaNadrz}
+        readOnly
 
         onChange={(e) => setPlnaNadrz(e.target.value)}
 
