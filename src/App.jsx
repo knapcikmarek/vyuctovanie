@@ -234,7 +234,7 @@ export default function App() {
 
         type="number"
 
-        value={tankovanie}
+        value={tankovanie.nadrz}
 
         onChange={(e) => setTankovanie(e.target.value)}
 
