@@ -123,9 +123,8 @@ export default function App() {
         onChange={(e) => {
           const vozidlo = vozidla.find(
             (v) => v.id === Number(e.target.value)
-          );
+      );
     setVybraneVozidlo(vozidlo);
-    setPlnaNadrz(v.nadrz);
   }}
   >
   {vozidla.map((v) => (
@@ -249,8 +248,7 @@ export default function App() {
 
         type="number"
 
-        value={vybraneVozidlo.plnaNadrz}
-        readOnly
+        value={plnaNadrz}
 
         onChange={(e) => setPlnaNadrz(e.target.value)}
 
