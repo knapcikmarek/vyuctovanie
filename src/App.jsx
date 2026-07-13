@@ -249,6 +249,7 @@ export default function App() {
         type="number"
 
         value={plnaNadrz}
+        readOnly
 
         onChange={(e) => setPlnaNadrz(e.target.value)}
 
