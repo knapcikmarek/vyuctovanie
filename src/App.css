@@ -309,8 +309,8 @@ label {
 }
 
 .right-panel{
-  width: 25%;
-  min-width: 25%;
+  width: 35%;
+  min-width: auto;
   background-color: #1d1d1d;
   border-radius: 18px;
   padding: 20px;
@@ -353,8 +353,8 @@ label {
 }
 
 .sidebar{
-  width:25%;
-  min-width: 25%;
+  width:15%;
+  min-width: auto;
   height: 100vh;
   overflow-y:auto;
   background:#1d1d1d;
@@ -554,6 +554,7 @@ label {
     .main-panel{
       display: block;
         width:50%;
+        min-width: auto;
         padding:15px;
         margin:0px;
         border-radius: 0;
