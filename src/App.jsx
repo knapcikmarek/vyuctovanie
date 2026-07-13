@@ -329,49 +329,49 @@ export default function App() {
       
         <FaClock className="result-icon" />
         <span className="restult-label">Pretáčanie spolu</span>
-        <h3>{pretacanieMin} h</h3>
+        <h3>{pretacanieMin.toFixed(3)} h</h3>
     </div>
 
     <div className="result-card">
       
         <FaClock className="result-icon" />
         <span className="restult-label">Mth spolu:</span>
-        <h3>{MthSpolu.toFixed(2)} h</h3>
+        <h3>{MthSpolu.toFixed(3)} h</h3>
     </div>
     
     <div className="result-card">
       
         <FaRoad className="result-icon" />
         <span className="restult-label">Spotreba km:</span>
-        <h3>{litreKm.toFixed(2)} l</h3>
+        <h3>{litreKm.toFixed(3)} l</h3>
     </div>
 
     <div className="result-card">
       
       <FaClock className="result-icon" />
       <span className="restult-label">Spotreba Mth:</span>
-      <h3>{litreMth.toFixed(2)} l</h3>
+      <h3>{litreMth.toFixed(3)} l</h3>
     </div>
     
     <div className="result-card">
       
       <FaGasPump className="result-icon" />
       <span className="restult-label">Spotreba Spolu:</span>
-      <h3>{litreSpolu.toFixed(2)} l</h3>
+      <h3>{litreSpolu.toFixed(3)} l</h3>
     </div>
 
     <div className="result-card">
       
       <FaGasPump className="result-icon" />
       <span className="restult-label">Spotreba od tankovania:</span>
-      <h3>{NovaSpotreba.toFixed(2)} l</h3>
+      <h3>{NovaSpotreba.toFixed(3)} l</h3>
     </div>
 
     <div className="result-card">
       
       <FaGasPump className="result-icon" />
       <span className="restult-label">Zostatok nádrže:</span>
-      <h3>{zostatok.toFixed(2)} l</h3>
+      <h3>{zostatok.toFixed(3)} l</h3>
     </div>
 
   
