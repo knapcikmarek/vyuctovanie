@@ -125,6 +125,7 @@ export default function App() {
             (v) => v.id === Number(e.target.value)
       );
     setVybraneVozidlo(vozidlo);
+    setPlnaNadrz(nadrz);
   }}
   >
   {vozidla.map((v) => (
