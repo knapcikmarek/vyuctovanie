@@ -502,36 +502,54 @@ label {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .title h1{
-    font-size: 52px;
-    line-height: 1;
-    text-align: center;
-    word-break: break-word;
+  .container{
+      display:block;
+      width:100%;
+      padding:12px;
   }
-
-  .title p{
-    font-size: 22px;
-    text-align: center;
+  
+  .sidebar{
+      display:none;
   }
-
-  .form-grid{
-    grid-template-columns: 1fr;
-    gap: 16px;
+  
+  .vehicle-card{
+      display:none;
   }
-
+  
   .calculator{
-    padding:20px;
+      width:100%;
+      margin:0;
+      padding:20px;
+      border-radius:20px;
   }
-
+  
+  .form-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+  }
+  
+  .result-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+  }
+  
+  .title h1{
+      font-size:40px;
+  }
+  
+  .title p{
+      font-size:18px;
+  }
+  
   input{
-    height:55px;
-    font-size:18px;
+      width:100%;
   }
-
+  
   button{
-    height:60px;
-    font-size:22px;
+      width:100%;
   }
-}
+  }
