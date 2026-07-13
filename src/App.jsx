@@ -248,7 +248,7 @@ export default function App() {
 
         type="number"
 
-        value={vybraneVozidlo.nadrz}
+        value={vybraneVozidlo.plnaNadrz}
         readOnly
 
         onChange={(e) => setPlnaNadrz(e.target.value)}
