@@ -38,7 +38,7 @@ export default function App() {
     },
     {
       id:3,
-      nazov: "Iveco Traker",
+      nazov: "Iveco Trakker",
       obrazok: "/images/iveco_traker.png",
       palivo: "Diesel",
       plnaNadrz: 700,
