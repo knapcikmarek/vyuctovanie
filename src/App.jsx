@@ -248,7 +248,7 @@ export default function App() {
 
         type="number"
 
-        value={plnaNadrz}
+        value={vybraneVozidlo.plnaNadrz}
         readOnly
 
         onChange={(e) => setPlnaNadrz(e.target.value)}
