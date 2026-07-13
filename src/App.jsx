@@ -94,9 +94,9 @@ export default function App() {
 
   const pretacanieMin = (Number(pretacania) * Number(minuty)) / 60;
 
-  const litreKm = (Number(km) / 100) * Number(spotreba100);
+  const litreKm = (Number(km) / 100) * Number(vybraneVozidlo.spotreba100);
 
-  const litreMth = (((Number(mth) / 60) + Number(pretacanieMin))) * Number(spotrebaMth);
+  const litreMth = (((Number(mth) / 60) + Number(pretacanieMin))) * Number(vybraneVozidlo.spotrebaMth);
 
   const litreSpolu = litreKm + litreMth;
 
@@ -104,9 +104,9 @@ export default function App() {
 
   const [tankovanie,setTankovanie]= useState("");
 
-  const zostatok = Number(plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
+  const zostatok = Number(vybraneVozidlo.plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(vybraneVozidlo.spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(vybraneVozidlo.spotreba100)));
 
-  const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100))); 
+  const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(vybraneVozidlo.spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(vybraneVozidlo.spotreba100))); 
   
   function vypocitaj(){
     setVypocitane(true);
@@ -322,8 +322,6 @@ export default function App() {
   <div className="result-container">
     <h2>Výsleky</h2>
   <div className="result-grid">
-  
-
     
     <div className="result-card">
       
