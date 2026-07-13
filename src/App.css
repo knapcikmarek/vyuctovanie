@@ -554,7 +554,6 @@ label {
     .main-panel{
       display: block;
         width:50%;
-        min-width: auto;
         padding:15px;
         margin:0px;
         border-radius: 0;
