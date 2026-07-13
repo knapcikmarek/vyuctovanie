@@ -85,15 +85,7 @@ export default function App() {
   return (
     
     <div className="container">
-      <div className="mobile-select">
-  <select
-    value={vybraneVozidlo}
-    onChange={(e) => setVybraneVozidlo(e.target.value)}
-  >
-    <option value="scania">🚒 Scania CAS 20</option>
-    <option value="iveco">🚐 Iveco Daily</option>
-  </select>
-</div>
+      
       <div className="sidebar">
 
 <h2>🚒 Vozidlá</h2>
@@ -125,6 +117,15 @@ export default function App() {
         </div>
 
       </div>
+      <div className="mobile-select">
+  <select
+    value={vybraneVozidlo}
+    onChange={(e) => setVybraneVozidlo(e.target.value)}
+  >
+    <option value="scania">🚒 Scania CAS 20</option>
+    <option value="iveco">🚐 Iveco Daily</option>
+  </select>
+</div>
     
   <div className="form-grid">
   
