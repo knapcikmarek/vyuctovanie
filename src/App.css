@@ -543,12 +543,12 @@ label {
   @media (max-width:768px){
 
     .container{
-        display:block;
+        
         width:100%;
         max-width:100%;
         margin:0;
         padding:10px;
-        background: #001eff;
+        background: black;
     }
     
     .main-panel{
