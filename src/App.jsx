@@ -42,7 +42,7 @@ export default function App() {
 
   const [vybraneVozidlo, setVybraneVozidlo] = useState(predvoleneVozidla[0]);
   
-  const [plnaNadrz, setPlnaNadrz] = useState(vybraneVozidlo.nadrz);
+  const [plnaNadrz, setPlnaNadrz] = useState(vybraneVozidlo.plnaNadrz);
 
   const [pretacania, setPretacania] = useState("");
 
@@ -357,7 +357,7 @@ export default function App() {
     />
     <h2>{vybraneVozidlo.nazov}</h2>
     <p>⛽{vybraneVozidlo.palivo}</p>
-    <p>🛢 {vybraneVozidlo.nadrz} l</p>
+    <p>🛢 {vybraneVozidlo.plnaNadrz} l</p>
     <p>📊 {vybraneVozidlo.spotreba100} l/100</p>
     <p>⚙ {vybraneVozidlo.spotrebaMth} l/h</p>
   </div>
