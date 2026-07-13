@@ -74,7 +74,7 @@ export default function App() {
 
   const [tankovanie,setTankovanie]= useState("");
 
-  const zostatok = Number(plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
+  const zostatok = Number(predvoleneVozidla[0].plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
 
   const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100))); 
   
