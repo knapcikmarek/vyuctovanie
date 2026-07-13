@@ -1,7 +1,45 @@
 import { useState } from "react";
 import "./App.css";
+import{
+  FaTruck,
+  FaGasPump,
+  FaRoad,
+  FaClock,
+  FaTachometerAlt,
+  FaOilCan,
+  FaFillDrip,
+
+}from "react-icons/fa";
 
 export default function App() {
+
+  const predvoleneVozidla = [
+    {
+      id:1,
+      nazov: "Scania cas 20",
+      obrazok: "/images/scania.png",
+      palivo: "Diesel",
+      nadrz: 600,
+      spotreba100: 20,
+      spotrebaMth: 35,  
+    },
+    {
+      id:2,
+      nazov: "Iveco Daily",
+      obrazok: "/images/iveco.png",
+      palivo: "Diesel",
+      nadrz: 400,
+      spotreba100: 10,
+      spotrebaMth: 15,  
+      
+    }
+  ];
+
+  const [vozidla, setVozidla] = useState(predvoleneVozidla);
+
+  const [vybraneVozidlo, setVybraneVozidlo] = useState(predvoleneVozidla[0]);
+  
+  const [plnaNadrz, setPlnaNadrz] = useState(vybraneVozidlo.nadrz);
 
   const [pretacania, setPretacania] = useState("");
 
@@ -11,13 +49,9 @@ export default function App() {
 
   const [km, setKm] = useState("");
 
-  const [spotreba100, setSpotreba100] = useState("");
+  const [spotreba100, setSpotreba100] = useState(predvoleneVozidla[0].spotreba100);
 
-  const [spotrebaMth, setSpotrebaMth] = useState("");
-
-  const [tankovanie, setTankovanie] = useState("");
-
-  const [plnaNadrz, setPlnaNadrz] = useState("");
+  const [spotrebaMth, setSpotrebaMth] = useState(predvoleneVozidla[0].spotrebaMth);
 
   const [Mthnovymesiac, setMthnovymesiac] = useState("");
 
@@ -35,6 +69,8 @@ export default function App() {
 
   const MthSpolu = ((Number(mth) / 60) + Number(pretacanieMin));
 
+  const [tankovanie,setTankovanie]= useState("");
+
   const zostatok = Number(plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100)));
 
   const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(spotreba100))); 
@@ -45,7 +81,27 @@ export default function App() {
 
   return (
     <div className="container">
-    <div style={{ padding: 20, maxWidth: 500, margin: "auto" }}>
+      <div className="sidebar">
+
+<h2>🚒 Vozidlá</h2>
+
+{vozidla.map((v) => (
+  <button
+    key={v.id}
+    className={vybraneVozidlo.id === v.id ? "vehicle active" : "vehicle"}
+    onClick={() => {
+      setVybraneVozidlo(v);
+      setSpotreba100(v.spotreba100);
+      setSpotrebaMth(v.spotrebaMth);
+      setPlnaNadrz(v.nadrz);
+    }}
+  >
+    🚒 {v.nazov}
+  </button>
+))}
+
+</div>
+      <div className="main-panel">
 
       <div className="header">
         <span className="truck">🚒</span>
@@ -55,9 +111,12 @@ export default function App() {
         </div>
 
       </div>
-
+    
+  <div className="form-grid">
+  
     <div className="field">
-      <label>Pretáčanie x krát</label>
+      <label>
+        <FaTruck />Pretáčanie x krát</label>
 
       <input
 
@@ -70,7 +129,7 @@ export default function App() {
       />
       </div>
       <div className="field">
-      <label>Minúty na jedno pretáčanie</label>
+      <label><FaClock />Minúty na jedno pretáčanie</label>
 
       <input
 
@@ -83,7 +142,7 @@ export default function App() {
       />
       </div>
       <div className="field">
-      <label>Motohodiny (min)</label>
+      <label><FaTachometerAlt />Motohodiny (min)</label>
 
       <input
 
@@ -96,7 +155,8 @@ export default function App() {
       />
       </div>
       <div className="field">
-      <label>Kilometre</label>
+      <label>
+        <FaRoad />Kilometre</label>
 
       <input
 
@@ -110,13 +170,15 @@ export default function App() {
       </div>
 
       <div className="field">
-      <label>Spotreba na 100 km</label>
+      <label>
+        <FaTachometerAlt />Spotreba na 100 km</label>
 
       <input
 
         type="number"
 
-        value={spotreba100}
+        value={vybraneVozidlo.spotreba100}
+        readOnly
 
         onChange={(e) => setSpotreba100(e.target.value)}
 
@@ -125,13 +187,15 @@ export default function App() {
 
       <div className="field">
 
-      <label>Spotreba na Mth (l/h)</label>
+      <label>
+        <FaClock />Spotreba na Mth (l/h)</label>
 
       <input
 
         type="number"
 
-        value={spotrebaMth}
+        value={vybraneVozidlo.spotrebaMth}
+        readOnly
 
         onChange={(e) => setSpotrebaMth(e.target.value)}
 
@@ -140,7 +204,8 @@ export default function App() {
 
       <div className="field">
 
-      <label>Tankovanie (l)</label>
+      <label>
+        <FaGasPump />Tankovanie (l)</label>
 
       <input
 
@@ -154,7 +219,7 @@ export default function App() {
       </div>
 
     <div className="field">
-      <label>Plná nádrž (l)</label>
+      <label><FaGasPump />Plná nádrž (l)</label>
 
       <input
 
@@ -169,7 +234,7 @@ export default function App() {
 
       <div className="field">
 
-       <label>Mth od tankovania (min)</label>
+       <label><FaTachometerAlt/>Mth od tankovania (min)</label>
 
       <input
 
@@ -181,7 +246,7 @@ export default function App() {
       />
       </div>
        <div className="field">
-       <label>Km od tankovania (km)</label>
+       <label><FaRoad/>Km od tankovania (km)</label>
 
       <input
 
@@ -192,8 +257,11 @@ export default function App() {
         onChange={(e) => setKmnovymesiac(e.target.value)}
       />
       </div>
+    </div>
       
 <button onClick={vypocitaj}>Vypočítať</button>
+
+
 
 {vypocitane && (
   <div className="vysledky">
@@ -218,6 +286,20 @@ export default function App() {
   </>
   </div>
 )}    </div>
+<div className="right-panel">
+  <div className="vehicle-card">
+    <img
+    src={vybraneVozidlo.obrazok}
+    className="vehicle-image"
+    alt={vybraneVozidlo.nazov}
+    />
+    <h2>{vybraneVozidlo.nazov}</h2>
+    <p>⛽{vybraneVozidlo.palivo}</p>
+    <p>🛢 {vybraneVozidlo.nadrz} l</p>
+    <p>📊 {vybraneVozidlo.spotreba100} l/100</p>
+    <p>⚙ {vybraneVozidlo.spotrebaMth} l/h</p>
+  </div>
+</div>
 </div>
 
   );
