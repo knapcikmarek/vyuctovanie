@@ -432,52 +432,6 @@ label {
 
 }
 
-@media (max-width: 768px) {
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 20px;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .calculator {
-    width: 100%;
-  }
-
-  .inputs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .result-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .title h1 {
-    font-size: 42px;
-  }
-
-  .title p {
-    font-size: 20px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .vehicle-card {
-    display: none;
-  }
-}
-
-.mobile-select{
-  display:none;
-}
-
 @media (max-width:768px){
 
   .sidebar{
@@ -507,7 +461,9 @@ label {
   .container{
       display:block;
       width:100%;
+      max-width: 100%;
       padding:12px;
+      box-sizing: border-box;
   }
   
   .sidebar{
