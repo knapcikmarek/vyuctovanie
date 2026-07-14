@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
 
 html,
@@ -9,7 +10,7 @@ body {
   align-items: flex-start;
   background: #121212;
   color: white;
-  font-family: 'Orbitron',sans-serif;
+  font-family: 'Bebas Neue',sans-serif;
 }
 body{
   background: #222;
@@ -18,15 +19,14 @@ body{
 }
 
 .container{
-  display:grid;
-  grid-template-columns:220px 1fr 340px;
-  gap:25px;
-
-  width:95%;
-  max-width:1800px;
-
-  margin:30px auto;
-  align-items:start;
+    width:95%;
+    max-width:1800px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:260px 1fr 340px;
+    gap:20px;
+    padding-top: 55px;
+  
 }
 
 .title h1{
@@ -44,23 +44,6 @@ body{
   color: #e53935;
   margin-bottom: 30px;
   text-shadow: 0 0 10px rgba(229,57,53,.5);
-}
-
-.header{
-  display:flex;
-  align-items:center;
-  gap:25px;
-
-  background:#901e1e;
-  border-radius:20px;
-
-  padding:30px;
-  margin-bottom:30px;
-
-  box-shadow:0 0 25px rgba(0,0,0,.35);
-}
-.header-logo{
-  width: 50%;
 }
 
 .header h1{
@@ -126,11 +109,13 @@ button {
 }
 
 button:hover {
-  background: #001eff;
+  background: #f24343;
 }
 
 .reslt-container{
   margin-top: 35px;
+  font-family: 'Bebas Neue',sans-serif;
+
 }
 .result-container h2{
   color: #ffb300;
@@ -160,6 +145,7 @@ button:hover {
     font-weight:600;
     color:#ddd;
     margin-bottom:16px;
+    font-family: 'Bebas Neue',sans-serif;
 }
 
 
@@ -223,6 +209,7 @@ button:hover {
   font-size: 25px;
   margin: 0;
   text-align: center;
+  font-family: 'Bebas Neue',sans-serif;
 }
 
 
@@ -345,12 +332,49 @@ label {
   font-size: 20px;
   color:#ffb300;
   margin-bottom:20px;
+  text-shadow: 0 7px 12px rgba(255, 200, 0, .35);
 }
 
 .vehicle-card p{
   font-size:20px;
   margin-bottom:20px ;
+  font-family: 'Bebas Neue',sans-serif;
 }
+
+.value-vozidlo{
+  color: #ff3b1f;
+  font-size: 23px;
+  font-weight: 900;
+  text-shadow: 0 7px 8px rgba(255, 60, 30,.35);
+}
+
+.header{
+  width:95%;
+  max-width: 1800px;
+  margin: 20px auto -35px auto;
+  
+  position:relative;
+  z-index: 100;
+  box-shadow: 0 8px 25px rgba(0,0,0,.35);
+  
+  overflow: visible;
+}
+
+.header-image{
+  width:100%;
+  aspect-ratio: 5/1;
+  object-fit:cover;
+  display:block;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45)
+              0 8px 25px rgba(255, 60, 0, .18);
+
+
+
+  
+}
+
+
 
 .sidebar{
   width:15%;
@@ -392,18 +416,14 @@ label {
 
 .vehicle:hover{
   background:#444;
+  box-shadow: 0 0px 25px rgba(177, 158, 9, 0.637); ;
 }
-
-.vehicle.active{
-  background:#d62828;
-  font-weight:bold;
-}
-
 
 .sidebar h2{
   text-align:center;
-  color:#ff3b3b;
   margin-bottom:20px;
+  color: #ffb300;
+  text-shadow: 0 7px 12px rgba(255, 200, 0, .35);
 }
 
 .vehicle{
@@ -425,8 +445,8 @@ label {
 }
 
 .vehicle.active{
-  background:#d32f2f;
-  border: 2px solid #ffffff;
+  background:#d3482f;
+  border: none;
   transform: scale(1.03);
 }
 
@@ -441,7 +461,9 @@ label {
   display:none;
 }
 
+
 @media (max-width:768px){
+
 
   .sidebar{
       display:none;
@@ -463,9 +485,29 @@ label {
       border:2px solid #ff3b1f;
       outline:none;
   }
-}
 
-@media (max-width:768px){
+
+
+  .header{
+      width:95%;
+      margin:10px auto;
+      padding:0;
+  }
+
+  .header-image{
+      width:100%;
+      height:auto;
+      max-height:120px;
+      object-fit:cover;
+      border-radius:18px;
+  }
+
+  .container{
+      padding-top:10px;
+  }
+
+
+  
 
   .container{
       display:block;
@@ -519,12 +561,11 @@ label {
   button{
       width:100%;
   }
-  }
+  
 
-  @media (max-width: 768px){
     .right-panel{
-      display:none}
-  }
+      display:none
+    }
   
   input,
   button,
@@ -532,17 +573,11 @@ label {
     width: 100%;
     box-sizing: border-box;
   }
-
-  @media (max-width: 768px){
     .title h1 {
       font-size: 42px;
       word-break: break-word;
     }
-  }
-
-  @media (max-width:768px){
-
-    .container{
+      .container{
         display: block;
         width:100%;
         max-width:100%;
@@ -557,12 +592,6 @@ label {
         padding:15px;
         margin:0px;
         border-radius: 0;
-    }
-    
-    .header{
-        flex-direction:column;
-        text-align:center;
-        padding:20px;
     }
     
     .header-logo{

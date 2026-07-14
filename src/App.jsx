@@ -158,12 +158,18 @@ export default function App() {
   }
 
   return (
-    
+    <div>
+    <header className="header">
+    <img
+          src={"images/header.png"}
+          className="header-image"
+          alt="Header"
+        />
+    </header>
     <div className="container">
-      
-      <div className="sidebar">
+    <div className="sidebar">
 
-<h2>🚒 Vozidlá</h2>
+<h2>Vozidlá</h2>
 
 {vozidla.map((v) => (
   <button
@@ -182,16 +188,10 @@ export default function App() {
 
 
 </div>
+
       <div className="main-panel">
 
-      <div className="header">
-        
-        <div>
-          <h1>KALKULAČKA</h1>
-          <h2>spotreby hasičského vozidla</h2>
-        </div>
-
-      </div>
+  
       <div className="mobile-select">
       <select
         value={vybraneVozidlo.id}
@@ -274,7 +274,7 @@ export default function App() {
 
       <input
 
-        type="number"
+        type="number" 
 
         value={vybraneVozidlo.spotreba100}
         readOnly
@@ -429,11 +429,13 @@ export default function App() {
     alt={vybraneVozidlo.nazov}
     />
     <h2>{vybraneVozidlo.nazov}</h2>
-    <p>⛽{vybraneVozidlo.palivo}</p>
-    <p>🛢 {vybraneVozidlo.plnaNadrz} l</p>
-    <p>📊 {vybraneVozidlo.spotreba100} l/100</p>
-    <p>⚙ {vybraneVozidlo.spotrebaMth} l/h</p>
+    <p>⛽ Palivo <span className="value-vozidlo">{vybraneVozidlo.palivo}</span></p>
+    <p>🛢 Plná nádrž <span className="value-vozidlo">{vybraneVozidlo.plnaNadrz}</span> l</p>
+    <p>📊 Spotreba  <span className="value-vozidlo">{vybraneVozidlo.spotreba100}</span> l/100km</p>
+    <p>⚙ Spotreba  <span className="value-vozidlo">{vybraneVozidlo.spotrebaMth}</span> l/h</p>
+    <button onClick={vypocitaj}>Vypočítať</button>
   </div>
+</div>
 </div>
 </div>
 
