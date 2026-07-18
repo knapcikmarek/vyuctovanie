@@ -416,7 +416,9 @@ label {
 
 .vehicle:hover{
   background:#444;
-  box-shadow: 0 0px 25px rgba(177, 158, 9, 0.637); ;
+  box-shadow: 0 0px 25px rgba(177, 158, 9, 0.637); 
+  transform:translateY(-5px);
+  border-color: #ffb300;
 }
 
 .sidebar h2{

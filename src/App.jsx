@@ -22,9 +22,9 @@ export default function App() {
       nazov: "Scania cas 20",
       obrazok: "/images/scania.png",
       palivo: "Diesel",
-      plnaNadrz: 600,
-      spotreba100: 20,
-      spotrebaMth: 35,  
+      plnaNadrz: 200,
+      spotreba100: 40,
+      spotrebaMth: 25,  
     },
     {
       id:2,
