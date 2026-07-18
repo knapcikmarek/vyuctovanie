@@ -155,7 +155,7 @@ export default function App() {
 
   const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(vybraneVozidlo.spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(vybraneVozidlo.spotreba100))); 
   
-  const skutocnaSpotreba = ((zvysokPaliva + tankovanie) - zvysokPaliva);
+  const skutocnaSpotreba = ((Number(tankovanie)+Number(zvysokPaliva))-NovaSpotreba);
 
   function vypocitaj(){
     setVypocitane(true);
@@ -448,7 +448,7 @@ export default function App() {
       
       <FaGasPump className="result-icon" />
       <span className="restult-label">Skutočná spotreba:</span>
-      <h3>{skutocnaSpotreba.toFixed(3)} l</h3>
+      <h3>{skutocnaSpotreba} l</h3>
     </div>
 
   
