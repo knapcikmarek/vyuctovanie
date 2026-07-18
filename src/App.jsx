@@ -61,9 +61,9 @@ export default function App() {
       nazov: "Tatra 815x7",
       obrazok: "/images/tatra.png",
       palivo: "Diesel",
-      plnaNadrz: 850,
-      spotreba100: 16,
-      spotrebaMth: 19,  
+      plnaNadrz: 220,
+      spotreba100: 55,
+      spotrebaMth: 15,  
       
     },
     {
@@ -149,10 +149,14 @@ export default function App() {
 
   const [tankovanie,setTankovanie]= useState("");
 
+  const [zvysokPaliva,setzvysokPaliva]= useState("");
+
   const zostatok = Number(vybraneVozidlo.plnaNadrz) - (((Number(Mthnovymesiac) / 60) * Number(vybraneVozidlo.spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(vybraneVozidlo.spotreba100)));
 
   const NovaSpotreba = (((Number(Mthnovymesiac) / 60) * Number(vybraneVozidlo.spotrebaMth)) + ((Number(Kmnovymesiac / 100)) * Number(vybraneVozidlo.spotreba100))); 
   
+  const skutocnaSpotreba = ((zvysokPaliva + tankovanie) - zvysokPaliva);
+
   function vypocitaj(){
     setVypocitane(true);
   }
@@ -304,6 +308,22 @@ export default function App() {
       <div className="field">
 
       <label>
+        <FaGasPump />Zvyšok paliva z mesiaca (l)</label>
+
+      <input
+
+        type="number"
+
+        value={zvysokPaliva}
+
+        onChange={(e) => setzvysokPaliva(e.target.value)}
+
+      />
+      </div>
+
+      <div className="field">
+
+      <label>
         <FaGasPump />Tankovanie (l)</label>
 
       <input
@@ -413,8 +433,22 @@ export default function App() {
     <div className="result-card">
       
       <FaGasPump className="result-icon" />
+      <span className="restult-label">Zvyšok paliva z minuleho mesiaca:</span>
+      <h3>{zvysokPaliva} l</h3>
+    </div>
+
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
       <span className="restult-label">Zostatok nádrže:</span>
       <h3>{zostatok.toFixed(3)} l</h3>
+    </div>
+
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
+      <span className="restult-label">Skutočná spotreba:</span>
+      <h3>{skutocnaSpotreba.toFixed(3)} l</h3>
     </div>
 
   
