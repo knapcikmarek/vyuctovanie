@@ -324,7 +324,7 @@ export default function App() {
       <div className="field">
 
       <label>
-        <FaGasPump />Tankovanie (l)</label>
+        <FaGasPump />Doplnené palivo (l)</label>
 
       <input
 
@@ -387,27 +387,28 @@ export default function App() {
   <div className="result-container">
     <h2>Výsleky</h2>
   <div className="result-grid">
-    
+        
     <div className="result-card">
       
-        <FaClock className="result-icon" />
-        <span className="restult-label">Pretáčanie spolu</span>
-        <h3>{pretacanieMin.toFixed(3)} h</h3>
+        <FaRoad className="result-icon" />
+        <span className="restult-label">Km:</span>
+        <h3>{km} Km</h3>
     </div>
 
-    <div className="result-card">
-      
-        <FaClock className="result-icon" />
-        <span className="restult-label">Mth spolu:</span>
-        <h3>{MthSpolu.toFixed(3)} h</h3>
-    </div>
-    
     <div className="result-card">
       
         <FaRoad className="result-icon" />
         <span className="restult-label">Spotreba km:</span>
         <h3>{litreKm.toFixed(3)} l</h3>
     </div>
+
+
+    <div className="result-card">
+      
+      <FaClock className="result-icon" />
+      <span className="restult-label">Mth spolu:</span>
+      <h3>{MthSpolu.toFixed(3)} h</h3>
+  </div>
 
     <div className="result-card">
       
@@ -435,6 +436,13 @@ export default function App() {
       <FaGasPump className="result-icon" />
       <span className="restult-label">Zvyšok paliva z minuleho mesiaca:</span>
       <h3>{zvysokPaliva} l</h3>
+    </div>
+
+    <div className="result-card">
+      
+      <FaGasPump className="result-icon" />
+      <span className="restult-label">Doplnené palivo:</span>
+      <h3>{tankovanie} l</h3>
     </div>
 
     <div className="result-card">
